@@ -37,7 +37,7 @@ MOVE          = mv -f
 TAR           = tar -cf
 COMPRESS      = gzip -9f
 DISTNAME      = ADD_NBO1.0.0
-DISTDIR = /home/kali/BoB/GilGil/ADD_NBO/.tmp/ADD_NBO1.0.0
+DISTDIR = /home/kali/BoB/GilGil/ADD_NBO/add_nbo/.tmp/ADD_NBO1.0.0
 LINK          = g++
 LFLAGS        = -Wl,-O1 -Wl,-rpath,/opt/Qt/6.1.2/gcc_64/lib
 LIBS          = $(SUBLIBS) /opt/Qt/6.1.2/gcc_64/lib/libQt6Core.so -lpthread   
@@ -157,7 +157,7 @@ DIST          = /opt/Qt/6.1.2/gcc_64/mkspecs/features/spec_pre.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
+		../.qmake.stash \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/default_pre.prf \
@@ -290,7 +290,7 @@ Makefile: ADD_NBO.pro /opt/Qt/6.1.2/gcc_64/mkspecs/linux-g++/qmake.conf /opt/Qt/
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/qt_config.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/spec_post.prf \
-		.qmake.stash \
+		../.qmake.stash \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/toolchain.prf \
 		/opt/Qt/6.1.2/gcc_64/mkspecs/features/default_pre.prf \
@@ -414,7 +414,7 @@ Makefile: ADD_NBO.pro /opt/Qt/6.1.2/gcc_64/mkspecs/linux-g++/qmake.conf /opt/Qt/
 /opt/Qt/6.1.2/gcc_64/mkspecs/features/qt_config.prf:
 /opt/Qt/6.1.2/gcc_64/mkspecs/linux-g++/qmake.conf:
 /opt/Qt/6.1.2/gcc_64/mkspecs/features/spec_post.prf:
-.qmake.stash:
+../.qmake.stash:
 /opt/Qt/6.1.2/gcc_64/mkspecs/features/exclusive_builds.prf:
 /opt/Qt/6.1.2/gcc_64/mkspecs/features/toolchain.prf:
 /opt/Qt/6.1.2/gcc_64/mkspecs/features/default_pre.prf:
@@ -459,7 +459,6 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) $(TARGET) 
-	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
