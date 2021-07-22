@@ -16,12 +16,6 @@ uint32_t loadFile(char *path)
     uint8_t buffer[4];
     uint32_t *p;
     uint32_t n;
-    if(fp==NULL)
-    {
-        printf("%s is not opened",path);
-        return 0;
-    }
-
     fread(&buffer,sizeof(uint8_t),4,fp);
 
     p=reinterpret_cast<uint32_t *>(buffer);
